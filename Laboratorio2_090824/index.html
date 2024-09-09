@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab2</title>
+    <style>
+        body {
+            font-family:'Times New Roman', Times, serif;
+            background-color: #ffe4e1;
+            color: #555;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+    
+        h1, h2 {
+            color: #ff69b4;
+            text-shadow: 2px 2px #ffa07a;
+        }
+    
+        #data-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        .item {
+            margin-bottom: 20px;
+            padding: 15px;
+            border: 2px solid #ffb6c1;
+            background-color: #fff0f5;
+            border-radius: 15px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 600px;
+            text-align: left;
+        }
+    
+        .item strong {
+            font-size: 1.2em;
+            color: #ff69b4;
+        }
+    
+        .item p {
+            font-size: 1em;
+            color: #333;
+        }
+    
+        .item small {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #777;
+        }
+    
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 8px 12px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    
+        button:hover {
+            background-color: #ff1493;
+        }
+    
+        button:active {
+            background-color: #ff69b4;
+            box-shadow: none;
+        }
+    
+        form {
+            background-color: #fff0f5;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+    
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 1.1em;
+            color: #ff69b4;
+        }
+    
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ffb6c1;
+            border-radius: 10px;
+            background-color: #fffafa;
+            font-size: 1em;
+            color: #555;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+        }
+    
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #ff69b4;
+        }
+
+    
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    
+        textarea {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 20px;
+            height: 80px;
+            resize: none;
+        }
+    
+        ::placeholder {
+            color: #ffb6c1;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>Fetch API Methods</h1>
+    <button id="fetch-button">Initial Fetch</button>
+    <div id="data-container"></div>
+    
+    <h4>Create a New Post</h4>
+    <form id="post-form">
+        <label for="userId">User ID:</label>
+        <input type="number" id="userId" name="userId" required>
+        <br>
+        <label for="title">Title:</label>
+        <input type="text" id="title" name="title" required>
+        <br>
+        <label for="body">Body:</label>
+        <textarea id="body" name="body" required></textarea>
+        <br>
+        <button type="submit">Create Post</button>
+    </form>
+
+    <script src="index.js"></script>
+</body>
+</html>
